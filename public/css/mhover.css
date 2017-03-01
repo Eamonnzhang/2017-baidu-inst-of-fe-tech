@@ -1,0 +1,136 @@
+@import "./base.css";
+@keyframes flowing {
+    from {
+        background-position: 100% 0;
+    }
+    to {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes coloring {
+    from {
+        color: yellow
+    }
+    20% {
+        color: blue
+    }
+    40% {
+        color: gray;
+    }
+    60% {
+        color: #000;
+    }
+    80% {
+        color: green;
+    }
+    to {
+        color: yellow;
+    }
+}
+
+.outer-wrap {
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    &:hover {
+        .bg {
+            filter: blur(3px);
+        }
+        .line.top,
+        .line.bottom {
+            left: 0;
+            width: 100%;
+        }
+        .line.left,
+        .line.right {
+            height: 100%;
+            top: 0px;
+        }
+        .text {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+.bg {
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    background: url('/public/images/hover-bg.jpg') center no-repeat;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    transition: 500ms all;
+}
+
+.inner-wrap {
+    width: 360px;
+    height: 240px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    text-align: center;
+    h1 {
+        background-image: linear-gradient(to right, yellow, blue 10%, green 20%, blue 30%, green 40%, yellow 50%, blue 60%, green 70%, yellow 80%, blue 90%, yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: flowing 6s linear infinite;
+        background-size: 200%;
+    }
+    .line {
+        position: absolute;
+        background-color: #fff;
+        transition: 500ms all;
+        &.top,
+        &.bottom {
+            height: 3px;
+            width: 0;
+            left: 50%;
+        }
+        &.top {
+            top: 0px;
+        }
+        &.bottom {
+            bottom: 0px;
+        }
+        &.left,
+        &.right {
+            width: 3px;
+            height: 0;
+            top: 50%;
+        }
+        &.left {
+            left: 0px;
+        }
+        &.right {
+            right: 0px;
+        }
+    }
+    .text {
+        margin-top: 75px;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 500ms;
+    }
+    .slogan {
+        text-align: center;
+    }
+    .link {
+        text-decoration: none;
+        animation: coloring 4s linear infinite;
+        font-size: 22px;
+        font-weight: bold;
+    }
+}

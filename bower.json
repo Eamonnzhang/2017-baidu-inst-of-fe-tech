@@ -1,0 +1,21 @@
+{
+    "name": "2017baidu",
+    "description": "",
+    "main": "index.js",
+    "authors": [
+        "EamonnZhang <5eamonn99@gmail.com>"
+    ],
+    "license": "ISC",
+    "homepage": "https://github.com/Eamonnzhang/2017-baidu-institute-of-fe-tech",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "^3.1.1"
+    }
+}
