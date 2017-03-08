@@ -1,0 +1,39 @@
+@import "./base.css";
+$zdeg: 350px;
+.outer-wrap {
+    position: relative;
+    width: 1000px;
+    margin: 100px auto;
+    perspective: 1000px;
+    .inner-wrap {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+        transform: translate(-50%, -50%) rotateY(120deg);
+        img {
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            &:nth-child(1) {
+                transform: rotateY(0deg) translateZ($zdeg);
+            }
+            &:nth-child(2) {
+                transform: rotateY(60deg) translateZ($zdeg);
+            }
+            &:nth-child(3) {
+                transform: rotateY(120deg) translateZ($zdeg);
+            }
+            &:nth-child(4) {
+                transform: rotateY(180deg) translateZ($zdeg);
+            }
+            &:nth-child(5) {
+                transform: rotateY(240deg) translateZ($zdeg);
+            }
+            &:nth-child(6) {
+                transform: rotateY(300deg) translateZ($zdeg);
+            }
+        }
+    }
+}
