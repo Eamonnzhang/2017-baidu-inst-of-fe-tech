@@ -6,21 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS3 3D轮播图</title>
-    <link rel="stylesheet" type="" href="/dest/css/3d.css">
+    <link rel="stylesheet" type="" href="../../dest/css/3d.css">
 </head>
 
 <body>
-    <div class="outer-wrap">
-        <div class="inner-wrap">
+    <!--舞台元素设置perspective属性，表示视角的远近-->
+    <div id="stage" class="outer-wrap">
+        <!--容器设置 transform-style:preverse-3d，使其子元素看起来有3D效果-->
+        <div id="container" class="inner-wrap">
             <img src="/public/images/3d/1.jpg" alt="">
             <img src="/public/images/3d/2.jpg" alt="">
             <img src="/public/images/3d/3.jpg" alt="">
             <img src="/public/images/3d/4.jpg" alt="">
             <img src="/public/images/3d/5.jpg" alt="">
             <img src="/public/images/3d/6.jpg" alt="">
-            <img src="/public/images/3d/7.jpg" alt="">
         </div>
     </div>
 </body>
 
 </html>
+<script>
+    (function() {
+        // CSS transform变换应用
+        var transform = function(element, value, key) {
+                key = key || "Transform";
+                ["Moz", "O", "Ms", "Webkit", ""].forEach(function(prefix) {
+                    element.style[prefix + key] = value;
+                });
+
+                return element;
+            }
+            // 浏览器选择器API
+            ,
+            $ = function(selector) {
+                return document.querySelector(selector);
+            },
+            $$ = function(selector) {
+                return document.querySelectorAll(selector);
+            };
+
+        // 显示图片
+        var rotate = 60;
+        // 元素
+        var eleContainer = $(".inner-wrap"),
+            indexPiece = 0;
+        // 元素
+        eleContainer.addEventListener("click", function() {
+            transform(this, "rotateY(" + (-1 * rotate * ++indexPiece) + "deg)");
+        });
+    })();
+</script>

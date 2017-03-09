@@ -1,20 +1,24 @@
 @import "./base.css";
-$zdeg: 350px;
+$zdeg: 319.81px;
 .outer-wrap {
     position: relative;
-    width: 1000px;
+    width: 50%;
     margin: 100px auto;
     perspective: 1000px;
     .inner-wrap {
         position: absolute;
-        left: 50%;
-        top: 50%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        transform: rotateY(0deg);
         transform-style: preserve-3d;
         transition: transform 1s;
-        transform: translate(-50%, -50%) rotateY(120deg);
         img {
             width: 300px;
-            height: 200px;
+            height: 220px;
             position: absolute;
             &:nth-child(1) {
                 transform: rotateY(0deg) translateZ($zdeg);
