@@ -373,9 +373,9 @@ table {
 .outer-wrap {
     position: relative;
     width: 50%;
-    margin: 100px auto;
-    -webkit-perspective: 1000px;
-            perspective: 1000px;
+    margin: 80px auto;
+    -webkit-perspective: 750px;
+            perspective: 750px;
 }
 
 .outer-wrap .inner-wrap {
@@ -403,32 +403,32 @@ table {
 }
 
 .outer-wrap .inner-wrap img:nth-child(1) {
-    -webkit-transform: rotateY(0deg) translateZ(319.81px);
-            transform: rotateY(0deg) translateZ(319.81px);
+    -webkit-transform: rotateY(0deg) translateZ(450px);
+            transform: rotateY(0deg) translateZ(450px);
 }
 
 .outer-wrap .inner-wrap img:nth-child(2) {
-    -webkit-transform: rotateY(60deg) translateZ(319.81px);
-            transform: rotateY(60deg) translateZ(319.81px);
+    -webkit-transform: rotateY(60deg) translateZ(450px);
+            transform: rotateY(60deg) translateZ(450px);
 }
 
 .outer-wrap .inner-wrap img:nth-child(3) {
-    -webkit-transform: rotateY(120deg) translateZ(319.81px);
-            transform: rotateY(120deg) translateZ(319.81px);
+    -webkit-transform: rotateY(120deg) translateZ(450px);
+            transform: rotateY(120deg) translateZ(450px);
 }
 
 .outer-wrap .inner-wrap img:nth-child(4) {
-    -webkit-transform: rotateY(180deg) translateZ(319.81px);
-            transform: rotateY(180deg) translateZ(319.81px);
+    -webkit-transform: rotateY(180deg) translateZ(450px);
+            transform: rotateY(180deg) translateZ(450px);
 }
 
 .outer-wrap .inner-wrap img:nth-child(5) {
-    -webkit-transform: rotateY(240deg) translateZ(319.81px);
-            transform: rotateY(240deg) translateZ(319.81px);
+    -webkit-transform: rotateY(240deg) translateZ(450px);
+            transform: rotateY(240deg) translateZ(450px);
 }
 
 .outer-wrap .inner-wrap img:nth-child(6) {
-    -webkit-transform: rotateY(300deg) translateZ(319.81px);
-            transform: rotateY(300deg) translateZ(319.81px);
+    -webkit-transform: rotateY(300deg) translateZ(450px);
+            transform: rotateY(300deg) translateZ(450px);
 }
 /*# sourceMappingURL=3d.css.map */

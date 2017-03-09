@@ -1,10 +1,10 @@
 @import "./base.css";
-$zdeg: 319.81px;
+$zdeg: 450px;
 .outer-wrap {
     position: relative;
     width: 50%;
-    margin: 100px auto;
-    perspective: 1000px;
+    margin: 80px auto;
+    perspective: 750px;
     .inner-wrap {
         position: absolute;
         left: 0;
