@@ -7,7 +7,10 @@
 ### 1. 有趣的鼠标悬浮效果
 [Online Demo](http://blog.eamonn.cn/2017-baidu-inst-of-fe-tech/views/mouse-hover/)
 
-### 2. CSS3实现3D 轮播图
+### 2. CSS3实现3D轮播图
 [Online Demo](http://blog.eamonn.cn/2017-baidu-inst-of-fe-tech/views/3d-carousel/)
 
-### 3. 待更新
+### 3. 正则表达式之入门
+[Online Demo](http://blog.eamonn.cn/2017-baidu-inst-of-fe-tech/views/reg1/)
+
+### 4. 待更新
