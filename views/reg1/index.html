@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正则表达式入门</title>
+    <link rel="stylesheet" type="" href="../../dest/css/reg1.css">
+</head>
+
+<body>
+    <div class="outer-wrap">
+        <div class="input-wrap">
+            <input type="text" placeholder="11位手机号" id="mobile">
+            <a href="javascript:void(0)" class="v-btn" id="_mobile">验证</a>
+            <p>输入正确</p>
+        </div>
+        <div class="input-wrap">
+            <input type="text" placeholder="（eg. foo foo bar）" id="words">
+            <a href="javascript:void(0)" class="v-btn" id="_words">验证</a>
+            <p>输入错误</p>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    (function() {
+        var $ = function(selector) {
+                return document.querySelector(selector);
+            },
+            $$ = function(selector) {
+                return document.querySelectorAll(selector);
+            },
+            startValidate = function(target, reg, value) {
+                if (!reg.test(value)) {
+                    target.nextElementSibling.innerHTML = '验证失败';
+                    target.nextElementSibling.className = "error";
+                } else {
+                    target.nextElementSibling.innerHTML = '验证成功';
+                    target.nextElementSibling.className = "success";
+                }
+                target.nextElementSibling.style = "display:block";
+            },
+            addEvents = function(doms, eventName, eventCb) {
+                for (var i = 0, length = doms.length; i < length; i++) {
+                    doms[i].addEventListener(eventName, eventCb);
+                }
+            },
+            regMap = {
+                _mobile: /^[1][3|5|7|8]\d{9}$/,
+                _words: /\b(\w+)\s+\1\b/
+            };
+        addEvents($$('.v-btn'), 'click', function(e) {
+            var target = e.target;
+            var value = target.previousElementSibling.value;
+            var reg = regMap[target.id]
+            startValidate(target, reg, value);
+        })
+    })()
+</script>
